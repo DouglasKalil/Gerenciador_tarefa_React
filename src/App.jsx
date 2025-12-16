@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AddTarefa from "./componentes/AddTarefa";
-import Tarefa from "./componentes/tarefa";
+import Tarefa from "./componentes/Tarefa";
 
 function App() {
   const [tarefa, setTarefa] = useState(
