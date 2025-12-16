@@ -1,4 +1,4 @@
-import { ChevronRightIcon, TrashIcon } from "lucide-react";
+import { CheckIcon, ChevronRightIcon, TrashIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 function Tarefa({ tarefa, onTarefaClick, onDeleteTarefaClick }) {
@@ -17,10 +17,11 @@ function Tarefa({ tarefa, onTarefaClick, onDeleteTarefaClick }) {
         <li key={tarefa.id} className="flex gap-2">
           <button
             onClick={() => onTarefaClick(tarefa.id)}
-            className={`bg-slate-400 text-left text-white p-2 rounded-md w-full ${
+            className={`bg-slate-400 text-left text-white p-2 rounded-md w-full flex items-center gap-2 ${
               tarefa.isCompleted ? "line-through" : ""
             }`}
           >
+            {tarefa.isCompleted && <CheckIcon />}
             {tarefa.title}
           </button>
           <button
